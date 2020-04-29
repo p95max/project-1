@@ -1,21 +1,32 @@
-let money = prompt ("Yours month expences?");
-let time = prompt("Enter date");
+let num = 50;
 
-let appData = {
-    budget: money,
-    timeData: time,
-    expences: {},
-    optionalExpences: {},
-    income: [],
-    savings: false
-     };
+if (num < 49) {
+    console.log ("Wrong")
+} else if (num>100) {
+    console.log("Too much")  // условие несокращенное
+} else {
+    console.log("correct")
+}
 
-let a1 = prompt ("Enter yours important expences stage in budget "),
-    a2 =  prompt ("How many will it?"),
-    a3 = prompt ("Enter yours important expences stage in budget "),
-    a4 =  prompt ("How many will it?");
+(num == 50) ? console.log('Correct') : console.log ('Wrong'); // сокращенное условие
 
-appData.expences [a1] = a2;
-appData.expences [a3] = a4;
 
-alert (appData.budget / 30);
+switch (num) {
+        case num < 49:
+           console.log("Wrong");
+        break;
+        case num > 100: 
+           console.log("Too much");
+        break;
+        case num > 80:
+           console.log("Too much");
+        break;
+        case 50:
+           console.log("correct");
+           break;
+
+        default:
+            console.log ("Something wrong");
+            break;
+
+}
