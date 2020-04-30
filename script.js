@@ -1,51 +1,42 @@
+let money = +prompt ("Yours month expences?");
+let time = prompt("Enter date");
+
+let appData = {
+    budget: money,
+    timeData: time,
+    expences: {},
+    optionalExpences: {},
+    income: [],
+    savings: false
+     };
+
+let a1 = prompt ("Enter yours important expences stage in budget "),
+    a2 =  prompt ("How many will it?"),
+    a3 = prompt ("Enter yours important expences stage in budget "),
+    a4 =  prompt ("How many will it?");
 
 
-if (num < 49) {
-    console.log ("Wrong")
-} else if (num>100) {
-    console.log("Too much")  // условие несокращенное
-} else {
-    console.log("correct")
-}
+for (let i = 0; 1 < 2; i++) {
+   let a = prompt ("Enter yours important expences stage in budget "),
+       b =  prompt ("How many will it?");
+   if (typeof(a)) ==='string' && (typeof(a)) !=null && (typeof(b)) !=null
+   && a != '' && b != '' && a.length < 50) {
+      console.log ("done");
+      appData.expences[a] = b;
+   }  else {
 
-(num == 50) ? console.log('Correct') : console.log ('Wrong'); // сокращенное условие
-
-
-switch (num) {
-        case num < 49:
-           console.log("Wrong");
-        break;
-        case num > 100: 
-           console.log("Too much");
-        break;
-        case num > 80:
-           console.log("Too much");
-        break;
-        case 50:
-           console.log("correct");
-           break;
-
-        default:
-            console.log ("Something wrong");
-            break;
-
-}
-
-let num = 50;
-//while (num < 55) {
-//console.log(num);
-//num++;
-//} 
-
-do {
-  console.log(num);
-  num++;
-}
-while (num < 55);
-
-for (let i =1; i < 8; i++) {
-   if (i==6) {
-      continue
    }
-   console.log(i)
+};
+
+appData.moneyPerDay = appData.budget / 30;
+alert ("Daily budget:" + appData.moneyPerDay);
+
+if (appData.moneyPerDay < 100) {
+   console.log("Minimal budget");
+} else if (appData.moneyPerDay) > 100 && appData.moneyPerDay < 2000) {
+   console.log("Avaragal budget");
+} else if (appData.moneyPerDay > 2000) {
+   console.log("Large budget");
+}else {
+   console.log("Wrong data");
 }
